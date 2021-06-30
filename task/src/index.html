@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Virtual Piano</title>
+    <style>
+        html {
+            background-color: lightgrey;
+            width: 100%;
+            padding: 0;
+            margin: 0;
+        }
+
+
+        .container {
+            width: 50%;
+            margin: auto;
+            padding-top:10%;
+        }
+
+        .white-keys kbd {
+            display: inline-block;
+            margin-left: -3px;
+            height: 250px;
+            width:  50px;
+            background-color: white;
+            /*border: solid 2px grey;*/
+            text-align: center;
+        }
+
+        .black-keys kbd {
+            display: inline-block;
+            margin-left: -3px;
+            height: 150px;
+            width:  40px;
+            background-color: black;
+            text-align: center;
+            color: white;
+            z-index: 1;
+            position: relative;
+            top: 150px;
+        }
+        #W {
+            left: 29px;
+        }
+        #E {
+            left: 40px;
+        }
+        #T {
+            left: 101px;
+        }
+        #Y {
+            left: 111px;
+        }
+        #U {
+            left: 121px;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+<div class="black-keys">
+    <kbd id="W">W</kbd>
+    <kbd id="E">E</kbd>
+    <kbd id="T">T</kbd>
+    <kbd id="Y">Y</kbd>
+    <kbd id="U">U</kbd>
+</div>
+
+    <div class="white-keys">
+        <kbd>A</kbd>
+        <kbd>S</kbd>
+        <kbd>D</kbd>
+        <kbd>F</kbd>
+        <kbd>G</kbd>
+        <kbd>H</kbd>
+        <kbd>J</kbd>
+    </div>
+</div>
+
+</body>
+
+<script>
+    document.addEventListener('keydown', function(event) {
+       switch (event.key.toUpperCase())
+       {
+           case 'A':
+               let audioA = new Audio("media/A.mp3");
+               audioA.play();
+               break;
+
+           case 'S':
+               let audioS = new Audio("media/S.mp3");
+               audioS.play();
+               break;
+
+           case 'D':
+               let audioD = new Audio("media/D.mp3");
+               audioD.play();
+               break;
+
+           case 'F':
+               let audioF = new Audio("media/F.mp3");
+               audioF.play();
+               break;
+
+           case 'G':
+               let audioG = new Audio("media/G.mp3");
+               audioG.play();
+               break;
+
+           case 'H':
+               let audioH = new Audio("media/H.mp3");
+               audioH.play();
+               break;
+
+           case 'J':
+               let audioJ = new Audio("media/J.mp3");
+               audioJ.play();
+               break;
+           case 'W':
+               let audioW = new Audio("media/W.mp3");
+               audioW.play();
+               break;
+           case 'E':
+               let audioE = new Audio("media/E.mp3");
+               audioE.play();
+               break;
+           case 'T':
+               let audioT = new Audio("media/T.mp3");
+               audioT.play();
+               break;
+           case 'Y':
+               let audioY = new Audio("media/Y.mp3");
+               audioY.play();
+               break;
+           case 'U':
+               let audioU = new Audio("media/U.mp3");
+               audioU.play();
+               break;
+
+               default:
+                   console.log(`WARNING: The '${event.key.toUpperCase()}' key is pressed - this is not a valid key.`);
+                   break;
+       }
+    })
+</script>
+
+</html>
